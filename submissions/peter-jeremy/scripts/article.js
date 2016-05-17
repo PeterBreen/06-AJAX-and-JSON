@@ -44,7 +44,7 @@ Article.loadAll = function(dataWePassIn) {
  source, process it, then hand off control to the View. */
 
 Article.fetchAll = function() {
-  if (localStorage.hackerIpsum) {
+  if (localStorage.hackerIpsum && localStorage.eTag) {
     $.ajax({
       type: 'HEAD',
       url: 'data/hackerIpsum.json',
